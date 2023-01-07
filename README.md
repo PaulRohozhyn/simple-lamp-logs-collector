@@ -1,4 +1,4 @@
-# lamp-logs-collector
+# Simple LAMP Logs Collector
 
 This is simple logs collector for dev environment
 
