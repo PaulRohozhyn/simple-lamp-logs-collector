@@ -1,17 +1,16 @@
 # Simple LAMP Logs Collector
 
-This is simple logs collector for dev environment
+This is a simple logs collector for the dev environment
 
-For example we have a website (https://localhost/index.php)
+For example, we have a website (https://localhost/index.php)
 ```
 /var/www/html/index.php
 ```
 and we want to see logs in a new bookmark (https://localhost/logs.php)
 
-How to setup ?
-First of all need config nginx (version for apache will be letter)
+How to set up it? First of all, need config NGINX (version for apache will be a letter) 
 
-config nginx 
+NGINX config file: 
 ```
 location ~ /logs.php {
     include         fastcgi_params;
@@ -24,15 +23,14 @@ then put logs.php into
 ```
 /var/www/html
 ```
-
 # pasword protection
 
-If you want password protection you need create .htpasswd. Run command bellow as root, dont forget change username to you user which will use in login form
+If you want password protection you need to create .htpasswd. Run the command below as root, don't forget to change the username to your user which will use in the login form:
 
 ```
 # sh -c "echo -n 'username:' >> /etc/nginx/.htpasswd"
 ```
-Then set password for user
+Then set password for user:
 ```
 # sh -c "openssl passwd -apr1 >> /etc/nginx/.htpasswd"
 ```
